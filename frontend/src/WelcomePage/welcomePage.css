@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sohne, Arial, Helvetica, sans-serif;
+}
+.welcomePage{
+  background-color: #F7F4ED;
+  height: 100dvh;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 1px solid black;
+  padding: 1rem 10%;
+}
+ ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.button{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0.5em 1.5em;
+}
+.getStart{
+  font-size: 0.9rem;
+}
+.heroSection{
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+}
+.heroSectionImg{
+  width: 40%;
+  aspect-ratio: 4/3;
+}
+.heroSectionContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.heroSectionContent h1{
+  font-size: 7rem;
+}
+.startReadingBtn{
+  margin-top: 1.2rem;
+  width: 30%;
+  font-size: 1.3rem;
+  border-radius: 25px;
+}
+li {
+  cursor: pointer;
+}
+.footer{
+  height: 10vh;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.8);
+}

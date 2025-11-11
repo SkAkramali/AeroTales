@@ -1,0 +1,181 @@
+.publishStoryContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2rem;
+}
+
+.profileInfo {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.authorImage {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.authorProfileContainer,
+.footer-icons {
+    padding-left: 2rem;
+    background-color: #fafafa;
+    margin: 2rem 0rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    border-radius: 10px;
+}
+
+.loader {
+    text-align: center;
+}
+
+.ProfileAuthorName {
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.published {
+    color: #545353;
+    margin-left: 1rem;
+}
+
+.copyButton {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #949494;
+    margin: 1rem;
+}
+
+.contents div {
+    display: block;
+    margin-right: auto;
+    width: 40%;
+}
+
+.closePopup {
+    cursor: pointer;
+}
+
+.copyPopup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 30vw;
+    padding: 0.6rem;
+    position: fixed;
+    top: 4rem;
+    left: 35%;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.story-content {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    width: 50vw;
+    border-radius: 2px;
+}
+
+.storyBody {
+    background: #f9f9f9;
+    font-size: 1.3rem;
+    padding: 29px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    word-wrap: break-word;
+    line-height: 3rem;
+}
+
+.interaction-buttons {
+    display: flex;
+}
+
+.interaction-buttons div {
+    cursor: default;
+}
+
+.action-button,
+.not-allowed {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #949494;
+    margin: 1rem;
+    font-size: 20px
+}
+
+
+.not-allowed {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.publishStoryTitle {
+    background: #f9f9f9;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+.contents .delimeter {
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileImg {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.userIntract {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.responseBtn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.authorFollow {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.followUnfollowBtn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.followUnfollowBtn:hover {
+    text-decoration: underline;
+}
+
+.red {
+    color: darkred;
+}
+
+.green {
+    color: green;
+}

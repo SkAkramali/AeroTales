@@ -1,0 +1,81 @@
+main{
+  display: flex;
+}
+.userDetails{
+  width: 65vw;
+  min-height: 95vh;
+  padding: 10vh 10vw 0 10vw;
+}
+.userProfile{
+  width: 35vw;
+  padding: 2.5rem;
+  border: 1px solid #F2F2F2;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.activeLink {
+  background-color: #f9f9f9;
+  padding: 0.6rem;
+  border-radius: 10px 10px 0 0;
+  color: green;
+}
+.inActiveLink{
+  padding: 0.6rem;
+  color: black;
+}
+.authorAvatar{
+  margin: 1rem;
+  width: 110px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  font-size: small;
+  color: #6B6B6B;
+}
+li {
+  cursor: pointer;
+}
+.userName{
+  margin-bottom: 8vh;
+}
+.following, .follower{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.follower h4, .following h4 {
+  cursor: pointer;
+}
+.following img, .follower img{
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.user-following-followers{
+  position: sticky;
+  top: 8vh;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 2px solid #F2F2F2;
+  display: flex;
+  gap: 1rem;
+}
+a{
+  color: green;
+  text-decoration: none;
+}
+.MyFollowingFollowers {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+

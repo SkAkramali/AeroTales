@@ -1,0 +1,86 @@
+.profileContainer {
+    width: 33vw;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 5rem;
+}
+
+.activeLink {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    padding: 0.6rem;
+    border-radius: 10px 10px 0 0;
+    color: green;
+}
+
+.inActiveLink {
+    cursor: pointer;
+    padding: 0.6rem;
+    color: black;
+}
+
+.authorPublish {
+    margin-top: 1rem;
+}
+
+.noStoriesIndicator {
+    margin: 1rem;
+    color: #6B6B6B;
+}
+
+.numberOfFollowersFollowing {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.followAuthorDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+.authorFollowingFollowers {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.followersAndFollowingDetails {
+    margin-top: 20px;
+}
+
+.authorFollowers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.authorFollowing {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.avatar {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%
+}
+
+.followAuthorDetails {
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.authorStoryContainer {
+    width: 50vw;
+    padding: 1rem;
+    border-bottom: 1px solid #7c7c7c29;
+}

@@ -1,0 +1,359 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-header,
+.write-story-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+.titleSearch {
+    display: flex;
+    gap: 5rem;
+}
+
+.searchIcon {
+    margin-left: 0.5rem;
+}
+
+.searchBar {
+    border-radius: 2rem;
+    background-color: #f9f9f9;
+    display: flex;
+    position:relative;
+    left: 55vw;
+    align-items: center;
+    gap: 0.3rem;
+    width: 13vw;
+    padding: 0.3rem;
+}
+
+.searchBar input {
+    background-color: transparent;
+    width: 9vw;
+    outline: none;
+    border: none;
+}
+
+.story-profile {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    color: #6B6B6B;
+    cursor: pointer;
+}
+
+.profile {
+    width: 39px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* write-story-page */
+
+.story-title {
+    font-size: 3.2rem;
+    border: none;
+    outline: none;
+}
+
+.publish-profile {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.write-story-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+    color: #6B6B6B;
+    font-size: 2em;
+}
+
+.medium-draft-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.saved {
+    width: 30px;
+    color: rgba(0, 0, 0, .55);
+}
+
+#publish-btn,
+#write-story-btn {
+    background-color: rgba(15, 159, 15, 0.867);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    cursor: pointer;
+}
+
+#publish-btn:hover {
+    background-color: rgb(21, 185, 21);
+}
+
+.story-content {
+    border: none;
+    outline: none;
+}
+
+.story-content:empty::before {
+    content: 'Tell story...';
+}
+
+/* draft page styles */
+.draft-stories {
+    margin-top: 5vh;
+    margin-left: 20vw;
+    width: 50vw;
+}
+
+.draft-stories-main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.drafts-published-responses {
+    display: flex;
+    gap: 20px;
+    color: #6B6B6B;
+    margin-top: 5vh;
+}
+
+.iconName {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.iconName:hover {
+    color: #3a3a3a;
+}
+
+.last-Modifed,
+.last-published {
+    color: #6B6B6B;
+    position: relative;
+}
+
+.last-Modifed::before {
+    content: 'Last modifed ';
+}
+
+.last-published::before {
+    content: 'Published ';
+}
+
+.draft-story {
+    border-bottom: 1px solid #F2F2F2;
+    margin: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+
+.draft-story h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.user-stories {
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    height: 63vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 5px 5px;
+    scrollbar-color: white;
+    scrollbar-width: thin;
+}
+
+.user-stories h2 {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.logoutPopupContainer,
+.overlay {
+    cursor: default;
+    width: 100vw;
+    height: 100vh;
+    background-color: #a2a2a247;
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    z-index: 50;
+}
+
+.overlay {
+    background-color: rgba(179, 176, 176, 0.3)
+}
+
+.logoutPopup {
+    text-align: center;
+    width: 250px;
+    border-radius: 11px;
+    background-color: #fefefe;
+    border: 1px solid #a2a2a2;
+    position: absolute;
+    left: 42%;
+    top: 2%;
+    padding: 1.5rem;
+}
+
+.logoutText {
+    padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.cancleLogoutButton {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-right: 1rem;
+}
+
+.logoutButton {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    margin-left: 1rem;
+    margin-top: 10px;
+}
+
+.profilePopup {
+    background-color: white;
+    position: fixed;
+    left: 80%;
+    top: 10vh;
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    border-radius: 10px;
+    width: 15vw;
+    padding: 0.5rem;
+    z-index: 20;
+}
+
+.profilePopup p {
+    color: #6B6B6B;
+    border-bottom: 1px solid bisque;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.mediumTitle {
+    font-family: Raleway, Georgia, Times, 'Times New Roman', serif 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    cursor: pointer;
+}
+
+.draft-title-delete-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    color: rgba(249, 6, 6, 0.924);
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+.delete-popup {
+    width: 30vw;
+    height: 40vh;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    top: 25vh;
+    left: 30vw;
+    background-color: white;
+    z-index: 60;
+
+    p {
+        width: 70%;
+    }
+}
+
+.cancel-delete-btns {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: black;
+}
+.cancel-btn:hover {
+    background-color: #f9f9f9;
+}
+.confirm-btn {
+    background-color: black;
+    color: white;
+}
+
+.draft-btns {
+    margin-top: 15%;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 80px;
+    height: 35px;
+    border-radius: 10%;
+}
+
+.arrow-btn {
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #f9f9f9;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.delete-drop-down {
+    width: 10%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
+    border-radius: 4px;
+    position: absolute;
+    top: inherit;
+}

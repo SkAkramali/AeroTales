@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.responseHeader {
+  padding: 1rem;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.response {
+  width: 60vw;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 235, 205, 0.050);
+  color: rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  border-bottom: 2px solid #F2F2F2;
+  z-index: 0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.respondedAt {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.responseProfile {
+  width: 3vw;
+  border-radius: 50%;
+}
+
+.userName {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.allResponses{
+  margin: 1rem;
+  height: 55vh;
+  overflow-y: scroll;
+  overflow-x: none;
+  scrollbar-color: white;
+  scrollbar-width: thin;
+}
+.addResponse {
+  position: sticky;
+  top: 10vh;
+  left: 20vw;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.writeResponse {
+  border: none;
+  width: 57vw;
+  height: 10vh;
+  outline: none;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.sendResponse {
+  cursor: pointer;
+  background-color: green;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.sendResponse:disabled {
+  background-color: lightgreen;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

@@ -1,0 +1,89 @@
+.storiesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+    font-family: Arial, Helvetica;
+}
+
+.mostRecentStories {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    max-height: 35vh;
+    width: 75vw;
+    background-color: #fafafa5e;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #afafaf;
+}
+
+.views {
+    cursor: default;
+    height: 0.8rem;
+    color: #afafaf;
+}
+
+.views svg {
+    position: relative;
+    top: 6px;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+    color: #242424;
+    font-size: small;
+}
+
+.authorProfile {
+    margin: 5px;
+    height: 25px;
+    aspect-ratio: 1;
+    border-radius: 20px;
+}
+
+.authorName {
+    cursor: pointer;
+}
+
+.storyContainer {
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.storyTitle {
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.storyOutline {
+    color: #7c7c7c;
+    font-size: large;
+    margin-top: 1rem;
+}
+
+.dashboardStoryImage {
+    height: 250px;
+    position: relative;
+    bottom: 20vh;
+    left: 69vw;
+}
+
+.publishedAt {
+    margin-top: 1rem;
+    color: #7c7c7c;
+    font-size: 0.85rem;
+}
