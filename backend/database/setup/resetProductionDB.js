@@ -9,12 +9,19 @@ const mkDir = dirPath => {
   }
 };
 
-const main = () => {
+const main = async () => {
   const dbDir = '../backend/database';
   const dbPath = join(dbDir, 'medium.db');
   mkDir(dbDir);
-  resetDB(dbPath);
-  populateMockData(dbPath);
+  try {
+    await resetDB(dbPath);
+    console.log('Database tables created successfully');
+    await populateMockData(dbPath);
+    console.log('Mock data populated successfully');
+  } catch (err) {
+    console.error('Error setting up database:', err);
+    process.exit(1);
+  }
 };
 
 main();

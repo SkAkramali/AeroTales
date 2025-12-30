@@ -30,12 +30,14 @@ const fetchUserDetails = (_, res, token) => {
 const storeUserDetails = async (req, res, userData) => {
   if (req.session.id) return userData;
   const error = 'Failed to store user details';
-  await req.app.locals.db
-    .addUser(userData)
-    .catch(
-      handleFailureWithMessage(res, StatusCodes.INTERNAL_SERVER_ERROR, error)
-    );
-  return userData;
+  try {
+    await req.app.locals.db.addUser(userData);
+    return userData;
+  } catch (err) {
+    console.error(err, error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error });
+    throw new Error(error);
+  }
 };
 
 const updateSessionWithUserDetails = (req, _, userData) => {
@@ -49,7 +51,15 @@ const handleLogin = (req, res) => {
     .then(access_token => fetchUserDetails(req, res, access_token))
     .then(userData => storeUserDetails(req, res, userData))
     .then(userData => updateSessionWithUserDetails(req, res, userData))
-    .then(() => res.redirect(req.app.locals.FRONT_END_URL));
+    .then(() => res.redirect(req.app.locals.FRONT_END_URL))
+    .catch(err => {
+      console.error('Login error:', err);
+      if (!res.headersSent) {
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ 
+          error: 'Login failed' 
+        });
+      }
+    });
 };
 
 const handlerIsLoggedIn = (req, res) => {

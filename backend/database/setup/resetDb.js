@@ -57,18 +57,30 @@ const DBCOMMANDS = `
     );`;
 
 const resetDb = dbPath => {
-  const db = new Database(dbPath, OPEN_READWRITE | OPEN_CREATE, err => {
-    if (err) {
-      throw err;
-    }
-  });
+  return new Promise((resolve, reject) => {
+    const db = new Database(dbPath, OPEN_READWRITE | OPEN_CREATE, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+    });
 
-  db.serialize(() => db.exec(DBCOMMANDS));
-
-  db.close(err => {
-    if (err) {
-      throw err;
-    }
+    db.serialize(() => {
+      db.exec(DBCOMMANDS, err => {
+        if (err) {
+          db.close();
+          reject(err);
+          return;
+        }
+        db.close(err => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
+        });
+      });
+    });
   });
 };
 
